@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  spring-doc:
+    swagger-ui:
+      enabled: true
+    packages-to-scan: 'com.adiFirstProject'
+  datasource:
+    url: jdbc:postgresql://localhost:5332/customer
+    username: adi
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        formal_sql: true
+    show-sql: true
+  main:
+    web-application-type: servlet
+
+logging:
+  level:
+    org:
+      springframework: debug
